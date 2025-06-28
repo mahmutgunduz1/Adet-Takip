@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="8dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCalendarIcon"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toTopOf="@id/tvTime"
+            app:layout_constraintBottom_toTopOf="@id/tvDay"
             app:layout_constraintEnd_toStartOf="@id/btnDelete"
             app:layout_constraintStart_toEndOf="@id/cvCalendarIcon"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,17 +43,61 @@
             tools:text="15 Temmuz 2024" />
 
         <TextView
+            android:id="@+id/tvDay"
+            style="@style/TextAppearance.SCS.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@id/tvTime"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintStart_toEndOf="@id/cvCalendarIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvDate"
+            tools:text="Pazartesi" />
+
+        <TextView
             android:id="@+id/tvTime"
             style="@style/TextAppearance.SCS.Body2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toTopOf="@id/tvDaysAgo"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintStart_toEndOf="@id/cvCalendarIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvDay"
+            tools:text="Saat: 14:30" />
+
+        <TextView
+            android:id="@+id/tvDaysAgo"
+            style="@style/TextAppearance.SCS.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvCycleHours"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintStart_toEndOf="@id/cvCalendarIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvTime"
+            tools:text="3 gün önce" />
+            
+        <TextView
+            android:id="@+id/tvCycleHours"
+            style="@style/TextAppearance.SCS.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
+            android:textColor="@color/fertility_blue"
+            android:textStyle="italic"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnDelete"
             app:layout_constraintStart_toEndOf="@id/cvCalendarIcon"
-            app:layout_constraintTop_toBottomOf="@id/tvDate"
-            tools:text="Saat: 14:30" />
+            app:layout_constraintTop_toBottomOf="@id/tvDaysAgo"
+            tools:text="Son adet tarihinizle bir önceki adet tarihinizin adet ortalaması 630 saattir." />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDelete"

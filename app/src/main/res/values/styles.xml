@@ -255,7 +255,8 @@
         <item name="colorSecondaryVariant">@color/accent_teal_dark</item>
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/accent_teal</item>
+        <item name="android:statusBarColor">@color/primary_teal</item>
+        <item name="android:windowLightStatusBar">false</item>
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/background_cream</item>
         <item name="android:navigationBarColor">@color/primary_teal</item>

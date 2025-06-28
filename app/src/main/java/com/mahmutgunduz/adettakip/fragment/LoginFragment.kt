@@ -1,4 +1,4 @@
-package com.osmanyildiz.scs.fragment
+package com.mahmutgunduz.adettakip.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -16,9 +16,8 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
-import com.osmanyildiz.scs.R
-import com.osmanyildiz.scs.databinding.FragmentLoginBinding
-
+import com.mahmutgunduz.adettakip.R
+import com.mahmutgunduz.adettakip.databinding.FragmentLoginBinding
 
 
 class LoginFragment : Fragment() {
@@ -31,6 +30,8 @@ class LoginFragment : Fragment() {
     private val KEY_EMAIL = "email"
     private val KEY_PASSWORD = "password"
     private val KEY_REMEMBER_ME = "remember_me"
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,11 +79,17 @@ class LoginFragment : Fragment() {
     private fun setupClickListeners() {
         binding.btnSignIn.setOnClickListener {
             // Giriş işlemi burada yapılacak
-            val email = binding.etUsername.text.toString()
+            val email = binding.etUsername.text.toString().trim()
             val password = binding.etPassword.text.toString()
             
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(requireContext(), "Lütfen tüm alanları doldurun", Toast.LENGTH_SHORT).show()
+                showErrorMessage("Lütfen tüm alanları doldurun")
+                return@setOnClickListener
+            }
+            
+            // İnternet bağlantısı kontrolü
+            if (!com.mahmutgunduz.adettakip.utils.NetworkUtils.isNetworkAvailable(requireContext())) {
+                showErrorMessage("İnternet bağlantınızı kontrol edin")
                 return@setOnClickListener
             }
             
@@ -100,12 +107,27 @@ class LoginFragment : Fragment() {
                 
                 binding.progressBar.visibility = View.GONE
                 binding.btnSignIn.isEnabled = true
-                Toast.makeText(requireContext(), "Giriş başarılı", Toast.LENGTH_SHORT).show()
+                showSuccessMessage("Giriş başarılı")
                 findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
-            }.addOnFailureListener {
+            }.addOnFailureListener { e ->
                 binding.progressBar.visibility = View.GONE
                 binding.btnSignIn.isEnabled = true
-                Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_SHORT).show()
+                
+                val errorMessage = when {
+                    e.message?.contains("INVALID_EMAIL") == true -> 
+                        "Geçersiz e-posta adresi"
+                    e.message?.contains("WRONG_PASSWORD") == true -> 
+                        "Hatalı şifre"
+                    e.message?.contains("USER_NOT_FOUND") == true -> 
+                        "Bu e-posta adresi ile kayıtlı kullanıcı bulunamadı"
+                    e.message?.contains("TOO_MANY_REQUESTS") == true -> 
+                        "Çok fazla başarısız deneme. Lütfen daha sonra tekrar deneyin"
+                    e.message?.contains("NETWORK_ERROR") == true -> 
+                        "İnternet bağlantınızı kontrol edin"
+                    else -> "Giriş başarısız: ${e.localizedMessage}"
+                }
+                
+                showErrorMessage(errorMessage)
             }
         }
         

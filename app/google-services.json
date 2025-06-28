@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "430517012598",
-    "project_id": "scsapp-41578",
-    "storage_bucket": "scsapp-41578.firebasestorage.app"
+    "project_number": "56941665743",
+    "project_id": "adet-takip-8eea6",
+    "storage_bucket": "adet-takip-8eea6.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:430517012598:android:fab981fe78685d92c7f757",
+        "mobilesdk_app_id": "1:56941665743:android:c097f487943f1528e4c6ba",
         "android_client_info": {
-          "package_name": "com.osmanyildiz.scs"
+          "package_name": "com.mahmutgunduz.adettakip"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBIHZRLGhiE0guJJ7HaIXDZo4NVFIh9vCA"
+          "current_key": "AIzaSyBBjY8RulkvCrPfBR7SAqgz9URUw6fDw9Y"
         }
       ],
       "services": {

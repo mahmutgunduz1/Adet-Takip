@@ -8,6 +8,7 @@
     <color name="primary_teal_dark">#00796B</color>
     <color name="primary_teal_light">#B2E5E1</color>
     <color name="accent_coral">#FF6B6B</color>
+    <color name="accent_coral_light">#FFEBEE</color>
 
     <!-- Arka Plan Renkleri -->
     <color name="background_cream">#FFF8F0</color>

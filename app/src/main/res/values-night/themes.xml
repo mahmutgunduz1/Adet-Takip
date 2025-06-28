@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Scs" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-       <item name="colorPrimary">@color/accent_teal</item>
+        <item name="colorPrimary">@color/primary_teal</item>
         <item name="android:statusBarColor">@color/primary_teal</item>
-
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">@color/accent_teal</item>
     </style>
 </resources>

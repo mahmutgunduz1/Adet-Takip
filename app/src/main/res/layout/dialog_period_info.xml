@@ -139,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     android:drawablePadding="8dp"
-                    android:text="• En fazla 9 adet tarih kaydedebilirsiniz. Bu sınıra ulaştığınızda yeni tarih eklemek için önce eski tarihlerden bazılarını silmeniz gerekir."
+                    android:text="• Bu hesaplamada son 9 adet kanama başlangıç tarihleri dikkate alınır. 9 dan fazla olan adet kanama bilgileri dikkate alınmaz."
                     android:textColor="@color/text_gray"
                     android:textSize="16sp"
                     app:drawableStartCompat="@drawable/ic_warning"
