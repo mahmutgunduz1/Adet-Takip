@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TextInputLayout style -->
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+        <item name="hintTextColor">@color/primary_teal</item>
+        <item name="android:textColorHint">@color/text_input_hint_color</item>
+        <item name="startIconTint">@color/primary_teal</item>
+        <item name="endIconTint">@color/primary_teal</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+    </style>
+
+    <!-- TextInputEditText style -->
+    <style name="CustomTextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColorHint">@color/medium_gray</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+    
+    <!-- Bottom Navigation Custom Style -->
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="itemIconTint">@color/primary_teal</item>
+        <item name="itemTextColor">@color/primary_teal</item>
+        <item name="itemRippleColor">@color/primary_teal</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.BottomNavigationView.Inactive</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemIconSize">20dp</item>
+    </style>
+
+    <style name="TextAppearance.BottomNavigationView.Active" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.BottomNavigationView.Inactive" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:alpha">0.7</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    
+    <!-- Card Style for Health Items -->
+    <style name="HealthCardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardBackgroundColor">@color/card_background_light</item>
+    </style>
+    
+    <!-- Text Styles -->
+    <style name="TextHeading" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="TextSubheading" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+    
+    <style name="TextBody" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+    
+    <style name="TextCaption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+    
+    <!-- Button Styles -->
+    <style name="ButtonPrimary" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/primary_teal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+    
+    <style name="ButtonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary_teal</item>
+        <item name="android:textColor">@color/primary_teal</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <!-- Base style for all SCS widgets -->
+    <style name="Widget.SCS" parent="@android:style/Widget.Material">
+        <!-- Base style for SCS widgets -->
+    </style>
+    
+    <!-- Metin Stilleri -->
+    <style name="TextAppearance.SCS.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.SCS.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.SCS.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.SCS.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_medium</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.SCS.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Buton Stilleri -->
+    <style name="Widget.SCS.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="backgroundTint">@color/primary_teal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:stateListAnimator">@animator/button_state_animator</item>
+    </style>
+
+    <style name="Widget.SCS.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="strokeColor">@color/primary_teal</item>
+        <item name="android:textColor">@color/primary_teal</item>
+        <item name="android:stateListAnimator">@animator/button_state_animator</item>
+    </style>
+
+    <style name="Widget.SCS.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_teal</item>
+        <item name="rippleColor">@color/primary_teal_light</item>
+    </style>
+
+    <!-- Kart Stilleri -->
+    <style name="Widget.SCS.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.SCS.CardView.Colored" parent="Widget.SCS.CardView">
+        <item name="cardBackgroundColor">@color/primary_teal_light</item>
+    </style>
+
+    <style name="Widget.SCS.CardView.Fertility" parent="Widget.SCS.CardView">
+        <item name="cardBackgroundColor">@color/fertility_blue_light</item>
+    </style>
+
+    <style name="Widget.SCS.CardView.Risky" parent="Widget.SCS.CardView">
+        <item name="cardBackgroundColor">@color/risky_days_red_light</item>
+    </style>
+
+    <style name="Widget.SCS.CardView.Safe" parent="Widget.SCS.CardView">
+        <item name="cardBackgroundColor">@color/safe_days_green_light</item>
+    </style>
+
+    <!-- İkon Konteyneri Stilleri -->
+    <style name="Widget.SCS.IconContainer" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/primary_teal_light</item>
+    </style>
+
+    <style name="Widget.SCS.IconContainer.Fertility">
+        <item name="cardBackgroundColor">@color/fertility_blue_light</item>
+    </style>
+
+    <style name="Widget.SCS.IconContainer.Risky">
+        <item name="cardBackgroundColor">@color/risky_days_red_light</item>
+    </style>
+
+    <style name="Widget.SCS.IconContainer.Safe">
+        <item name="cardBackgroundColor">@color/safe_days_green_light</item>
+    </style>
+
+    <!-- Giriş Alanı Stilleri -->
+    <style name="Widget.SCS.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxStrokeColor">@color/primary_teal</item>
+        <item name="hintTextColor">@color/primary_teal</item>
+    </style>
+
+    <!-- DatePicker Stilleri -->
+    <style name="Widget.SCS.DatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">calendar</item>
+        <item name="android:calendarTextColor">@color/text_dark</item>
+        <item name="android:headerBackground">@color/primary_teal</item>
+    </style>
+
+    <!-- Toolbar Stilleri -->
+    <style name="Widget.SCS.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/primary_teal</item>
+        <item name="android:elevation">4dp</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">@color/white</item>
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
+    </style>
+    
+    <!-- FAB Stilleri -->
+    <style name="Widget.SCS.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/primary_teal</item>
+        <item name="tint">@color/white</item>
+        <item name="elevation">6dp</item>
+        <item name="fabSize">normal</item>
+        <item name="rippleColor">@color/primary_teal_dark</item>
+    </style>
+
+    <!-- Secondary FloatingActionButton style -->
+    <style name="Widget.SCS.FloatingActionButton.Secondary" parent="Widget.SCS.FloatingActionButton">
+        <item name="backgroundTint">@color/accent_teal</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Theme.SCS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_teal</item>
+        <item name="colorPrimaryVariant">@color/primary_teal_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent_teal</item>
+        <item name="colorSecondaryVariant">@color/accent_teal_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/accent_teal</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/background_cream</item>
+        <item name="android:navigationBarColor">@color/primary_teal</item>
+    </style>
+</resources> 

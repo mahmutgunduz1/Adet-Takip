@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "430517012598",
+    "project_id": "scsapp-41578",
+    "storage_bucket": "scsapp-41578.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430517012598:android:fab981fe78685d92c7f757",
+        "android_client_info": {
+          "package_name": "com.osmanyildiz.scs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIHZRLGhiE0guJJ7HaIXDZo4NVFIh9vCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

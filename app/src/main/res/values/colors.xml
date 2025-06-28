@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Ana Renkler -->
+    <color name="primary_teal">#1A9E97</color>
+    <color name="primary_teal_dark">#00796B</color>
+    <color name="primary_teal_light">#B2E5E1</color>
+    <color name="accent_coral">#FF6B6B</color>
+
+    <!-- Arka Plan Renkleri -->
+    <color name="background_cream">#FFF8F0</color>
+    <color name="background_light">#F5F5F5</color>
+
+    <!-- Metin Renkleri -->
+    <color name="text_dark">#212121</color>
+    <color name="text_medium">#757575</color>
+    <color name="text_gray">#9E9E9E</color>
+    <color name="text_light">#BDBDBD</color>
+
+    <!-- Döngü Renkleri -->
+    <color name="fertility_blue">#3F51B5</color>
+    <color name="fertility_blue_light">#E8EAF6</color>
+    <color name="risky_days_red">#F44336</color>
+    <color name="risky_days_red_light">#FFEBEE</color>
+    <color name="safe_days_green">#4CAF50</color>
+    <color name="safe_days_green_light">#E8F5E9</color>
+    
+    <!-- Yeni Vurgu Renkleri -->
+    <color name="accent_purple">#9C27B0</color>
+    <color name="accent_purple_light">#F3E5F5</color>
+    <color name="accent_amber">#FFC107</color>
+    <color name="accent_amber_light">#FFF8E1</color>
+    
+    <!-- Durum Renkleri -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Main app colors based on the image -->
+    <color name="light_teal">#E0F5F3</color>
+    <color name="dark_teal">#098D84</color>
+    <color name="card_background_light">#E8F5F4</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#AAAAAA</color>
+    <color name="medium_gray">#DDDDDD</color>
+    <color name="background_dark">#000000</color>
+    <color name="card_background">#1C1C1E</color>
+    <color name="health_accent_orange">#FF8000</color>
+    <color name="ring_green">#4CAF50</color>
+    <color name="card_background_cream">#FFFAF0</color>
+    <color name="card_shadow">#20000000</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_red">#F44336</color>
+    
+    <!-- Text input colors -->
+    <color name="text_input_hint_color">@color/medium_gray</color>
+    <color name="text_input_box_stroke">@color/primary_teal</color>
+    
+    <!-- Bottom navigation colors -->
+    <color name="bottom_nav_item_color_teal">@color/primary_teal</color>
+
+    <!-- Accent colors for various health categories -->
+    <color name="accent_blue">#4A9FF5</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_teal">#009688</color>
+    <color name="accent_teal_dark">#00796B</color>
+    <color name="icon_green">#4CAF50</color>
+    <color name="icon_purple">#9C27B0</color>
+    <color name="icon_teal">#009688</color>
+    <color name="secondary_orange">#FF9800</color>
+    <color name="dark_orange">#F57C00</color>
+
+    <!-- Keep existing colors for backward compatibility -->
+    <color name="darkBlue">#1E2A38</color>
+    <color name="blue">#3F51B5</color>
+    <color name="darkCream">#FFF8E1</color>
+    <color name="lavender">#8B9AFF</color>
+    <color name="gray">#757575</color>
+    <color name="gray_light">#BDBDBD</color>
+    <color name="red">#F44336</color>
+    <color name="orange">#FF9800</color>
+    <color name="icon_blue">#2196F3</color>
+    <color name="icon_red">#F44336</color>
+    <color name="icon_orange">#FF9800</color>
+    <color name="ring_blue">#00BCD4</color>
+    <color name="ring_orange">#FF9800</color>
+</resources>

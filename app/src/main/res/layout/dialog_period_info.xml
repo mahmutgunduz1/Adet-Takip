@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/headerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/primary_teal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvWarningIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:elevation="4dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/headerBackground">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_warning"
+                android:tint="@color/primary_teal" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="Tarih Seçimi Hakkında Bilgiler"
+            android:textColor="@color/text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvWarningIcon" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDialogTitle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvInfo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="8dp"
+                    android:text="• Geçmiş tarihler seçilebilir, gelecek tarihler seçilemez."
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_check_circle"
+                    app:drawableTint="@color/success" />
+
+                <TextView
+                    android:id="@+id/tvInfo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="8dp"
+                    android:text="• Aynı tarih için birden fazla kayıt eklenemez."
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_check_circle"
+                    app:drawableTint="@color/success" />
+
+                <TextView
+                    android:id="@+id/tvInfo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="8dp"
+                    android:text="• Saat ve dakika bilgisi doğru şekilde girilmelidir."
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_check_circle"
+                    app:drawableTint="@color/success" />
+
+                <TextView
+                    android:id="@+id/tvInfo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="8dp"
+                    android:text="• Eklediğiniz tarihler ana ekranda kronolojik sırayla görüntülenir."
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_check_circle"
+                    app:drawableTint="@color/success" />
+
+                <TextView
+                    android:id="@+id/tvInfo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="8dp"
+                    android:text="• Eklenen tarihler daha sonra silinebilir."
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_check_circle"
+                    app:drawableTint="@color/success" />
+
+                <TextView
+                    android:id="@+id/tvInfo6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="8dp"
+                    android:text="• En fazla 9 adet tarih kaydedebilirsiniz. Bu sınıra ulaştığınızda yeni tarih eklemek için önce eski tarihlerden bazılarını silmeniz gerekir."
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_warning"
+                    app:drawableTint="@color/error" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btnClose"
+            style="@style/Widget.SCS.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="Anladım"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scrollContent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView> 
