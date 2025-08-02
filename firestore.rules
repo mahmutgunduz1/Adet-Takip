@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Kullanıcılar sadece kendi verilerine erişebilir
+    match /periodDates/{document} {
+      // Okuma izni - kullanıcı kendi verilerini okuyabilir
+      allow read: if request.auth != null && 
+                  request.auth.uid == resource.data.userId;
+      
+      // Yazma izni - kullanıcı kendi verilerini güncelleyebilir
+      allow write: if request.auth != null && 
+                   request.auth.uid == resource.data.userId;
+      
+      // Oluşturma izni - kullanıcı kendi verisini oluşturabilir
+      allow create: if request.auth != null && 
+                    request.auth.uid == request.resource.data.userId;
+      
+      // Liste sorguları için - sadece kendi verilerini listeleyebilir
+      allow list: if request.auth != null && 
+                  request.auth.uid in resource.data.userId;
+    }
+    
+    // Kullanıcı profil bilgileri
+    match /users/{userId} {
+      allow read, write: if request.auth != null && 
+                         request.auth.uid == userId;
+    }
+    
+    // Notlar - kullanıcılar sadece kendi notlarına erişebilir
+    match /notes/{document} {
+      // Geçici olarak daha basit kurallar - giriş yapan herkes erişebilir
+      allow read, write, create, delete: if request.auth != null;
+    }
+    
+    // Diğer tüm belgeler için erişim engellendi
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
